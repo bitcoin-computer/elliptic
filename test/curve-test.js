@@ -2,7 +2,7 @@
 'use strict';
 
 var assert = require('assert');
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var elliptic = require('../');
 
 describe('Curve', function() {

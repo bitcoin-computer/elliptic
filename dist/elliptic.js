@@ -16,7 +16,7 @@ elliptic.eddsa = require('./elliptic/eddsa');
 },{"../package.json":35,"./elliptic/curve":4,"./elliptic/curves":7,"./elliptic/ec":8,"./elliptic/eddsa":11,"./elliptic/utils":15,"brorand":17}],2:[function(require,module,exports){
 'use strict';
 
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var utils = require('../utils');
 var getNAF = utils.getNAF;
 var getJSF = utils.getJSF;
@@ -400,7 +400,7 @@ BasePoint.prototype.dblp = function dblp(k) {
 'use strict';
 
 var utils = require('../utils');
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var inherits = require('inherits');
 var Base = require('./base');
 
@@ -846,7 +846,7 @@ curve.edwards = require('./edwards');
 },{"./base":2,"./edwards":3,"./mont":5,"./short":6}],5:[function(require,module,exports){
 'use strict';
 
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var inherits = require('inherits');
 var Base = require('./base');
 
@@ -1027,7 +1027,7 @@ Point.prototype.getX = function getX() {
 'use strict';
 
 var utils = require('../utils');
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var inherits = require('inherits');
 var Base = require('./base');
 
@@ -2174,7 +2174,7 @@ defineCurve('secp256k1', {
 },{"./curve":4,"./precomputed/secp256k1":14,"./utils":15,"hash.js":19}],8:[function(require,module,exports){
 'use strict';
 
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var HmacDRBG = require('hmac-drbg');
 var utils = require('../utils');
 var curves = require('../curves');
@@ -2419,7 +2419,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
 },{"../curves":7,"../utils":15,"./key":9,"./signature":10,"bn.js":16,"brorand":17,"hmac-drbg":31}],9:[function(require,module,exports){
 'use strict';
 
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var utils = require('../utils');
 var assert = utils.assert;
 
@@ -2542,7 +2542,7 @@ KeyPair.prototype.inspect = function inspect() {
 },{"../utils":15,"bn.js":16}],10:[function(require,module,exports){
 'use strict';
 
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 
 var utils = require('../utils');
 var assert = utils.assert;
@@ -2927,7 +2927,7 @@ module.exports = KeyPair;
 },{"../utils":15}],13:[function(require,module,exports){
 'use strict';
 
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var utils = require('../utils');
 var assert = utils.assert;
 var cachedProperty = utils.cachedProperty;
@@ -3777,7 +3777,7 @@ module.exports = {
 'use strict';
 
 var utils = exports;
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var minAssert = require('minimalistic-assert');
 var minUtils = require('minimalistic-crypto-utils');
 

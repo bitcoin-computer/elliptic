@@ -4,7 +4,7 @@
 var assert = require('assert');
 var elliptic = require('../');
 var Signature = require('../lib/elliptic/ec/signature');
-var BN = require('bn.js');
+var BN = require('@bitcoin-computer/bn.js');
 var hash = require('hash.js');
 
 var entropy = [
@@ -65,8 +65,16 @@ describe('ECDSA', function() {
 
       it('should have `signature.s <= keys.ec.nh`', function() {
         // key.sign(msg, options)
-        var sign = keys.sign('hello', { canonical: true });
+        var sign = keys.sign('0A', { canonical: true });
         assert(sign.s.cmp(keys.ec.nh) <= 0);
+      });
+
+      it('should throw an error with invalid hex', function() {
+        assert.throws(function() {
+          keys.sign('hello', { canonical: true });
+        }, {
+          message: 'Invalid character in hello',
+        });
       });
 
       it('should support `options.k`', function() {

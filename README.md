@@ -46,7 +46,7 @@ Fastest is elliptic#ecdh
 ### ECDSA
 
 ```javascript
-var EC = require('elliptic').ec;
+var EC = require('@bitcoin-computer/elliptic').ec;
 
 // Create and initialize EC context
 // (better do it once and reuse it)
@@ -100,7 +100,7 @@ console.log(key.verify(msgHash, signature));
 ### EdDSA
 
 ```javascript
-var EdDSA = require('elliptic').eddsa;
+var EdDSA = require('@bitcoin-computer/elliptic').eddsa;
 
 // Create and initialize EdDSA context
 // (better do it once and reuse it)
@@ -130,7 +130,7 @@ console.log(key.verify(msgHash, signature));
 ### ECDH
 
 ```javascript
-var EC = require('elliptic').ec;
+var EC = require('@bitcoin-computer/elliptic').ec;
 var ec = new EC('curve25519');
 
 // Generate keys
@@ -147,7 +147,7 @@ console.log(shared2.toString(16));
 
 three and more members:
 ```javascript
-var EC = require('elliptic').ec;
+var EC = require('@bitcoin-computer/elliptic').ec;
 var ec = new EC('curve25519');
 
 var A = ec.genKeyPair();
